@@ -13,10 +13,10 @@ export default class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.Container();
+    this.GetBooks();
   }
 
-  Container() {
+  GetBooks() {
     API.getBooks().then(response => this.setState({ books: response.data }));
   }
 

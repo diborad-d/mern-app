@@ -1,10 +1,11 @@
 var createError = require("http-errors");
 var express = require("express");
-var mongoose = require("mongoose");
+var seedsDb = require("./scripts/seedsDB");
 var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var cors = require("cors");
+
 
 var indexRouter = require("./routes/index");
 var booksRouter = require("./routes/books");
@@ -40,7 +41,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
 
 module.exports = app;
 
