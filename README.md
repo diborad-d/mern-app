@@ -12,15 +12,20 @@ Start script: *```npm run dev```* - runs both backend and frontend servers simol
 ## Technologies 
 
 [x] React js
+
 [x] MongoDB
+
 [x] Node js
+
 [x] Material UI
 
 
 ## Feautures
 
 [ ] User Auth
+
 [ ] AWS deploy
+
 [ ] Cloud DB
 
  
