@@ -4,7 +4,7 @@ import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import API from "../utils/API";
-import Card from "./Card";
+import BookCard from "./Card";
 
 export default class Container extends React.Component {
   constructor(props) {
@@ -23,8 +23,7 @@ export default class Container extends React.Component {
   render() {
     const content = this.state.books.map((book, i) => (
       <div>
-        <h1>{ book.title }</h1>
-        <span>{ book.author }, { book.date }</span>
+        <BookCard book={book} />
       </div>
     ));
 
