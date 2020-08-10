@@ -76,6 +76,7 @@ export default function SearchAppBar(props) {
           <Typography className={classes.title} variant="h6" noWrap>
             Personal Library
           </Typography>
+          <Button>Show All Books</Button>
           <div className={classes.search}>
             <div className={classes.searchIcon}></div>
           </div>

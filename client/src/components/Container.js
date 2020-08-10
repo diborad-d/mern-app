@@ -34,7 +34,7 @@ export default class Container extends React.Component {
   };
 
   likeBook = async book => {
-    if(book.isLiked) {
+    if (book.isLiked) {
       book.likes--;
       book.isLiked = false;
     } else {
@@ -47,10 +47,22 @@ export default class Container extends React.Component {
     this.likeClicked = this.unlike;
   };
 
+
+    navigate = (book) => {
+      if(this.navText === "View More") {
+        this.navText = "Go Back";
+        this.setState({ books: [book] });
+      } else {
+        this.navText = "View More";
+        this.getBooks();
+      }
+    };
+    navText = "View More";
+
   render() {
     const content = this.state.books.map((book, i) => (
       <div>
-        <BookCard book={book} removeBook={this.removeBook} likeBook={this.likeBook} />
+        <BookCard book={book} removeBook={this.removeBook} likeBook={this.likeBook} navigate={this.navigate} navText={this.navText} />
       </div>
     ));
 

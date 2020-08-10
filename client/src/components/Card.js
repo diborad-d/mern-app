@@ -60,8 +60,11 @@ export default function ComplexGrid(props) {
                   </Typography>
                 </Grid>
                 <Grid item>
+                <Button variant="body2" style={{ cursor: "pointer", color: "primary", hover: "primary" }} onClick={() => props.navigate(props.book)}>
+                    {props.navText}
+                  </Button>
                   <Button variant="body2" style={{ cursor: "pointer", color: "primary", hover: "primary" }} onClick={() => props.removeBook(props.book._id)}>
-                    Remove
+                    Remove From List
                   </Button>
                 </Grid>
                 <Grid item>
