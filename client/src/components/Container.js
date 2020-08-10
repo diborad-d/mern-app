@@ -20,7 +20,6 @@ export default class Container extends React.Component {
 
   getBooks = async () => {
     var response = await API.getBooks();
-    console.log(response.data[0]);
     this.setState({ books: response.data });
   };
 
