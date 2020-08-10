@@ -12,6 +12,9 @@ export default {
   deleteBook: id => {
     return axios.delete(baseUrl + id);
   },
+  updateBook: book => {
+    return axios.put(baseUrl + book._id, book);
+  },
   addBook: bookData => {
     return axios.post(baseUrl, bookData);
   }

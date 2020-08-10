@@ -20,6 +20,7 @@ export default class Container extends React.Component {
 
   getBooks = async () => {
     var response = await API.getBooks();
+    console.log(response.data[0]);
     this.setState({ books: response.data });
   };
 
@@ -28,15 +29,22 @@ export default class Container extends React.Component {
     await this.getBooks();
   };
   addBook = async book => {
-    console.log(book);
     var response = await API.addBook(book);
+    await this.getBooks();
+  };
+  likeBook = async book => {
+    console.log(book);
+    book.likes++;
+    console.log(book);
+    var response = await API.updateBook(book);
+    console.log(response.data);
     await this.getBooks();
   };
 
   render() {
     const content = this.state.books.map((book, i) => (
       <div>
-        <BookCard book={book} removeBook={this.removeBook} />
+        <BookCard book={book} removeBook={this.removeBook} likeBook={this.likeBook} />
       </div>
     ));
 
