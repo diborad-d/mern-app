@@ -5,7 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import PropTypes from "prop-types";
-import { Card } from "@material-ui/core";
+import { Card, Button } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -53,9 +53,9 @@ export default function ComplexGrid(props) {
                 </Typography>
               </Grid>
               <Grid item>
-                <Typography variant="body2" style={{ cursor: "pointer" }}>
+                <Button variant="body2" style={{ cursor: "pointer" }} onClick={() => props.removeBook(props.book._id)}>
                   Remove
-                </Typography>
+                </Button>
               </Grid>
             </Grid>
           </Grid>

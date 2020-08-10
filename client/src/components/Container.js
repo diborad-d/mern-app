@@ -13,23 +13,29 @@ export default class Container extends React.Component {
   }
 
   componentDidMount() {
-    this.GetBooks();
+    this.getBooks();
   }
 
-  GetBooks() {
-    API.getBooks().then(response => this.setState({ books: response.data }));
-  }
+  getBooks = async () => {
+    var response = await API.getBooks();
+    this.setState({ books: response.data });
+  };
+
+  removeBook = async id => {
+    var response = await API.deleteBook(id);
+    await this.getBooks();
+  };
 
   render() {
     const content = this.state.books.map((book, i) => (
       <div>
-        <BookCard book={book} />
+        <BookCard book={book} removeBook={this.removeBook} />
       </div>
     ));
 
     return (
       <div id="layout-content" className="layout-content-wrapper">
-        <div className="panel-list">{ content }</div>
+        <div className="panel-list">{content}</div>
       </div>
     );
   }
