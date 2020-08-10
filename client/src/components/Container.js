@@ -32,13 +32,19 @@ export default class Container extends React.Component {
     var response = await API.addBook(book);
     await this.getBooks();
   };
+
   likeBook = async book => {
-    console.log(book);
-    book.likes++;
-    console.log(book);
-    var response = await API.updateBook(book);
-    console.log(response.data);
+    if(book.isLiked) {
+      book.likes--;
+      book.isLiked = false;
+    } else {
+      book.likes++;
+      book.isLiked = true;
+    }
+    await API.updateBook(book);
     await this.getBooks();
+
+    this.likeClicked = this.unlike;
   };
 
   render() {
