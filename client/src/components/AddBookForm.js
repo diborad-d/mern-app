@@ -39,6 +39,8 @@ export default function FakeAddBookForm(props) {
       <TextField name="title" label="Title" variant="outlined" />
       <TextField name="author" label="Author" variant="outlined" />
       <TextField name="synopsis" label="Synopsis" variant="outlined" />
+      <TextField name="price" label="Price" variant="outlined" />
+
       <Button type="submit" value="submit" variant="contained" color="primary">
         Add Book
       </Button>
