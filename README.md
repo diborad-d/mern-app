@@ -7,7 +7,7 @@
  - This app lets you add books with their titile, author, price and sysnopsis.
  - It has a CRUD frunctionality.
  
-Start script: *```npm run dev```* - runs both backend and frontend servers simoltinously using concurrently.
+Start script: *```npm run dev```* from client directory - runs both backend and frontend servers simoltinously using concurrently.
 
 ## Technologies 
 
