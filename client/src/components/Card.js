@@ -14,7 +14,10 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(2),
     margin: "auto",
-    maxWidth: 500
+    maxWidth: 500,
+    backgroundColor: "lightGray",
+    margin: "20px 0 20px 30%"
+    
   },
   image: {
     width: 128,
@@ -53,7 +56,7 @@ export default function ComplexGrid(props) {
                 </Typography>
               </Grid>
               <Grid item>
-                <Button variant="body2" style={{ cursor: "pointer" }} onClick={() => props.removeBook(props.book._id)}>
+                <Button variant="body2" style={{ cursor: "pointer" , color:"primary", hover: "primary"}} onClick={() => props.removeBook(props.book._id)}>
                   Remove
                 </Button>
               </Grid>

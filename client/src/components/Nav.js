@@ -5,8 +5,11 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import InputBase from "@material-ui/core/InputBase";
 import { fade, makeStyles } from "@material-ui/core/styles";
-import { MenuIcon } from "@material-ui/icons/Menu";
+// import { MenuIcon } from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
+import Button from "@material-ui/core/Button";
+import AddButton from "./AddButton";
+// import UserAuth from "./UserAuth";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -63,23 +66,21 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="open drawer">
-            {/* <MenuIcon /> */}
-          </IconButton>
+        {/* <UserAuth /> */}
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="open drawer"></IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Personal Library
           </Typography>
           <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
+            <div className={classes.searchIcon}></div>
+           
             <InputBase
               placeholder="Search…"
               classes={{
@@ -89,6 +90,8 @@ export default function SearchAppBar() {
               inputProps={{ "aria-label": "search" }}
             />
           </div>
+          <SearchIcon />
+          {/* <AddButton /> */}
         </Toolbar>
       </AppBar>
     </div>

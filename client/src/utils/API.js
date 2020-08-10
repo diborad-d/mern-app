@@ -12,7 +12,7 @@ export default {
   deleteBook: id => {
     return axios.delete(baseUrl + id);
   },
-  saveBook: bookData => {
+  addBook: bookData => {
     return axios.post(baseUrl, bookData);
   }
 };

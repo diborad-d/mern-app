@@ -5,6 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import API from "../utils/API";
 import BookCard from "./Card";
+import Nav from "./Nav";
+import AddBookForm from "./AddBookForm";
 
 export default class Container extends React.Component {
   constructor(props) {
@@ -25,6 +27,11 @@ export default class Container extends React.Component {
     var response = await API.deleteBook(id);
     await this.getBooks();
   };
+  addBook = async book => {
+    console.log(book);
+    var response = await API.addBook(book);
+    await this.getBooks();
+  };
 
   render() {
     const content = this.state.books.map((book, i) => (
@@ -35,6 +42,8 @@ export default class Container extends React.Component {
 
     return (
       <div id="layout-content" className="layout-content-wrapper">
+        <Nav />
+        <AddBookForm addBook={this.addBook} />
         <div className="panel-list">{content}</div>
       </div>
     );
