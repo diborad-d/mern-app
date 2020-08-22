@@ -25,7 +25,7 @@ Start script: *```npm run dev```* from client directory - runs both backend and 
 
 [ ] User Auth
 
-[ ] AWS deploy
+[ ] AWS Amplify
 
 [ ] Cloud DB
 
