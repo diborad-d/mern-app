@@ -16,6 +16,7 @@ Start script: *```npm run dev```* from client directory - runs both backend and 
 [x] MongoDB
 
 [x] Node js
+
 [x] Fetch API
 
 [x] Material UI
