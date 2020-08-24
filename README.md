@@ -11,22 +11,24 @@ Start script: *```npm run dev```* from client directory - runs both backend and 
 
 ## Technologies 
 
-[x] React js
+[x] React js - designed frontend using create-react-app 
 
-[x] MongoDB
+[x] Material UI - I used MUI to style react components.
 
-[x] Node js
+[x] MongoDB - I used mongoDB and its framework ```mongoose``` for database architecture. 
 
-[x] Fetch API
+[x] Node js - I used node js for backend enviroment like http request to db and routes
 
-[x] Material UI
+[x] Fetch API - I used fetch API as interface for network requests and fetch data.
+
+
 
 
 ## Feautures
 
 [ ] User Auth
 
-[ ] AWS Amplify
+[ ] AWS Amplify 
 
 [ ] Cloud DB
 
