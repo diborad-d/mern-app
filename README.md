@@ -17,7 +17,7 @@ Start script: *```npm run dev```* from client directory - runs both backend and 
 
 [x] MongoDB - I used mongoDB and its framework ```mongoose``` for database architecture. 
 
-[x] Node js - I used node js for backend enviroment like http request to db and routes
+[x] Node js - I used node js for backend enviroment like http requests to db and routes.
 
 [x] Fetch API - I used fetch API as interface for network requests and fetch data.
 
